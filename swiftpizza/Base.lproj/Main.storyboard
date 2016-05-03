@@ -8,7 +8,7 @@
         <!--Pizza's-->
         <scene sceneID="vnw-Qm-umJ">
             <objects>
-                <tableViewController id="BhQ-2X-SFA" sceneMemberID="viewController">
+                <tableViewController id="BhQ-2X-SFA" customClass="PizzaTableViewController" customModule="swiftpizza" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P6k-ge-bN1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jyU-j2-FhR" style="IBUITableViewCellStyleDefault" id="te2-8c-kkz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PizzaCell" textLabel="jyU-j2-FhR" style="IBUITableViewCellStyleDefault" id="te2-8c-kkz">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="te2-8c-kkz" id="Ra7-hM-lf5">
