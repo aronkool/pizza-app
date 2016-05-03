@@ -1,5 +1,5 @@
 //
-//  Ingredient.swift
+//  Topping.swift
 //  swiftpizza
 //
 //  Created by Aron Kool on 01-05-16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Ingredient {
+class Topping {
     let id : Int
     let naam : String
     

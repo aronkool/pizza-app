@@ -11,11 +11,11 @@ import Foundation
 class Pizza{
     let id : Int
     let naam : String
-    let ingredienten : [Ingredient]
+    let toppings : [Topping]
     
-    init(id : Int, naam : String, ingredienten : [Ingredient]){
+    init(id : Int, naam : String, toppings : [Topping]){
         self.id = id
         self.naam = naam
-        self.ingredienten = ingredienten
+        self.toppings = toppings
     }
 }

@@ -16,7 +16,7 @@
 		FB3674291CD14E6D00A3898A /* swiftpizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674281CD14E6D00A3898A /* swiftpizzaTests.swift */; };
 		FB3674341CD14E6D00A3898A /* swiftpizzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */; };
 		FBDEC6F21CD56775001E81C5 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F11CD56775001E81C5 /* Pizza.swift */; };
-		FBDEC6F41CD56806001E81C5 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F31CD56806001E81C5 /* Ingredient.swift */; };
+		FBDEC6F41CD56806001E81C5 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F31CD56806001E81C5 /* Topping.swift */; };
 		FBDEC6F71CD56A48001E81C5 /* PizzaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F61CD56A48001E81C5 /* PizzaService.swift */; };
 		FBDEC6F91CD56A5D001E81C5 /* MockPizzaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F81CD56A5D001E81C5 /* MockPizzaService.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftpizzaUITests.swift; sourceTree = "<group>"; };
 		FB3674351CD14E6D00A3898A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBDEC6F11CD56775001E81C5 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
-		FBDEC6F31CD56806001E81C5 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		FBDEC6F31CD56806001E81C5 /* Topping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
 		FBDEC6F61CD56A48001E81C5 /* PizzaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaService.swift; sourceTree = "<group>"; };
 		FBDEC6F81CD56A5D001E81C5 /* MockPizzaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPizzaService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FBDEC6F11CD56775001E81C5 /* Pizza.swift */,
-				FBDEC6F31CD56806001E81C5 /* Ingredient.swift */,
+				FBDEC6F31CD56806001E81C5 /* Topping.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 			files = (
 				FBDEC6F21CD56775001E81C5 /* Pizza.swift in Sources */,
 				FB3674191CD14E6D00A3898A /* swiftpizza.xcdatamodeld in Sources */,
-				FBDEC6F41CD56806001E81C5 /* Ingredient.swift in Sources */,
+				FBDEC6F41CD56806001E81C5 /* Topping.swift in Sources */,
 				FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */,
 				FBDEC6F91CD56A5D001E81C5 /* MockPizzaService.swift in Sources */,
 				FBDEC6F71CD56A48001E81C5 /* PizzaService.swift in Sources */,

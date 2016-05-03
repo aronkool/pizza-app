@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Pizza's-->
         <scene sceneID="vnw-Qm-umJ">
             <objects>
                 <tableViewController id="BhQ-2X-SFA" sceneMemberID="viewController">
@@ -14,12 +14,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mim-dC-hwA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PizzaCell" textLabel="1D6-nI-8bH" style="IBUITableViewCellStyleDefault" id="mim-dC-hwA">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mim-dC-hwA" id="leW-pl-OpD">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1D6-nI-8bH">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -28,7 +37,7 @@
                             <outlet property="delegate" destination="BhQ-2X-SFA" id="YuB-xn-XWL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pad-q0-D2U"/>
+                    <navigationItem key="navigationItem" title="Pizza's" id="pad-q0-D2U"/>
                     <connections>
                         <segue destination="XcB-JD-WlH" kind="show" identifier="showIngredienten" id="6hx-hY-2Ba"/>
                     </connections>
@@ -37,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="1145" y="1173"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Toppings-->
         <scene sceneID="ska-t1-n7o">
             <objects>
                 <tableViewController id="XcB-JD-WlH" sceneMemberID="viewController">
@@ -46,12 +55,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="te2-8c-kkz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jyU-j2-FhR" style="IBUITableViewCellStyleDefault" id="te2-8c-kkz">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="te2-8c-kkz" id="Ra7-hM-lf5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jyU-j2-FhR">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -60,6 +78,9 @@
                             <outlet property="delegate" destination="XcB-JD-WlH" id="Cux-Bv-NQm"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Toppings" id="8bF-4D-Huz">
+                        <barButtonItem key="rightBarButtonItem" title="Bestellen" id="FCZ-Cg-VwL"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="MFu-bz-4t2" kind="show" identifier="showOrder" id="6Yy-Uq-AbO"/>
                     </connections>

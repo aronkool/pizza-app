@@ -10,13 +10,38 @@ import Foundation
 
 class MockPizzaServiceInstance : PizzaServiceInstance{
     
+    private struct Toppings{
+        static let Tomaat = Topping(id: 0, naam: "Tomaat")
+        static let Kaas = Topping(id: 1, naam: "Kaas")
+        static let Salami = Topping(id: 2, naam: "Salami")
+        static let Ham = Topping(id: 3, naam: "Ham")
+        static let Zalm = Topping(id: 4, naam: "Zalm")
+        static let Tonijn = Topping(id: 5, naam: "Tonijn")
+        static let Mossel = Topping(id: 6, naam: "Mossel")
+        static let Kappertjes = Topping(id: 7, naam: "Kappertjes")
+        static let Basis = [Toppings.Tomaat, Toppings.Kaas]
+    }
+    
     override func getPizzas(onSucces: ([Pizza]) -> Void) {
-        let pizzas = [Pizza(id: 0, naam: "Margerita", ingredienten: []),
-                      Pizza(id: 1, naam: "Salami", ingredienten: []),
-                      Pizza(id: 2, naam: "Pescatore", ingredienten: []),
-                      Pizza(id: 3, naam: "Tonno", ingredienten: []),
-                      Pizza(id: 4, naam: "Kinderpizza", ingredienten: [])]
+        let pizzas = [Pizza(id: 0, naam: "Margerita", toppings: Toppings.Basis),
+                      Pizza(id: 1, naam: "Salami", toppings: Toppings.Basis + [Toppings.Salami]),
+                      Pizza(id: 2, naam: "Pescatore", toppings: Toppings.Basis + [Toppings.Zalm, Toppings.Tonijn, Toppings.Mossel, Toppings.Kappertjes]),
+                      Pizza(id: 3, naam: "Tonno", toppings: Toppings.Basis + [Toppings.Tonijn]),
+                      Pizza(id: 4, naam: "Kinderpizza", toppings: Toppings.Basis + [Toppings.Ham])]
         onSucces(pizzas)
+    }
+    
+    override func getToppings(onSucces: ([Topping]) -> Void) {
+        let toppings = [Toppings.Tomaat,
+                        Toppings.Kaas,
+                        Toppings.Salami,
+                        Toppings.Ham,
+                        Toppings.Zalm,
+                        Toppings.Tonijn,
+                        Toppings.Mossel,
+                        Toppings.Kappertjes
+                        ]
+        onSucces(toppings)
     }
     
     override func bestelPizza(pizza: Pizza, onCompletion: () -> Void) {

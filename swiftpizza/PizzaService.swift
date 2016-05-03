@@ -19,4 +19,8 @@ class PizzaServiceInstance{
     func bestelPizza(pizza : Pizza, onCompletion : () -> Void){
         
     }
+    
+    func getToppings(onSucces : ([Topping]) -> Void){
+        
+    }
 }
