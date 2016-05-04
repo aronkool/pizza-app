@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Pizza{
+struct Pizza{
     let id : Int
     let naam : String
-    let toppings : [Topping]
+    var toppings : [Topping]
     
     init(id : Int, naam : String, toppings : [Topping]){
         self.id = id

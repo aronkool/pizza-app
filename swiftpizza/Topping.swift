@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Topping {
+struct Topping {
     let id : Int
     let naam : String
     
