@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="1997" y="1173"/>
         </scene>
-        <!--Bestellen View Controller-->
+        <!--Bestellen-->
         <scene sceneID="9mN-eV-hdH">
             <objects>
                 <viewController id="MFu-bz-4t2" customClass="BestellenViewController" customModule="swiftpizza" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,6 +160,7 @@
                             <constraint firstItem="VTA-yU-ypF" firstAttribute="trailing" secondItem="cqb-rX-goc" secondAttribute="trailingMargin" id="xVa-4Q-PCL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Bestellen" id="MUX-qB-Oqn"/>
                     <connections>
                         <outlet property="bestellingTextField" destination="sZv-Bb-DrH" id="Fk0-Cg-vto"/>
                         <outlet property="nextButton" destination="VTA-yU-ypF" id="jji-R1-U9x"/>
