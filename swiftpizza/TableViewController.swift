@@ -22,4 +22,8 @@ class TableViewController : UITableViewController{
     func gaNaarToppings(){
         self.performSegueWithIdentifier("showToppings", sender: self)
     }
+    
+    func gaNaarBestellen(){
+        self.performSegueWithIdentifier("showOrder", sender: self)
+    }
 }

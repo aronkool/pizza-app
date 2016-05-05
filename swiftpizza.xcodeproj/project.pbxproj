@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB14A8601CDB510B00865D95 /* BestellenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */; };
 		FB3674111CD14E6D00A3898A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674101CD14E6D00A3898A /* AppDelegate.swift */; };
 		FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674121CD14E6D00A3898A /* ViewController.swift */; };
 		FB3674161CD14E6D00A3898A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3674141CD14E6D00A3898A /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestellenViewController.swift; sourceTree = "<group>"; };
 		FB36740D1CD14E6D00A3898A /* swiftpizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftpizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3674101CD14E6D00A3898A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB3674121CD14E6D00A3898A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				FB3C5C231CD914D400F49EE0 /* TableCells.swift */,
 				FB3C5C251CD916B600F49EE0 /* TableViewController.swift */,
 				FB3C5C271CD91A1A00F49EE0 /* ToppingsTableViewController.swift */,
+				FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				FBDEC6F21CD56775001E81C5 /* Pizza.swift in Sources */,
 				FB3674191CD14E6D00A3898A /* swiftpizza.xcdatamodeld in Sources */,
 				FB3C5C261CD916B600F49EE0 /* TableViewController.swift in Sources */,
+				FB14A8601CDB510B00865D95 /* BestellenViewController.swift in Sources */,
 				FBDEC6F41CD56806001E81C5 /* Topping.swift in Sources */,
 				FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */,
 				FBDEC6F91CD56A5D001E81C5 /* MockPizzaService.swift in Sources */,

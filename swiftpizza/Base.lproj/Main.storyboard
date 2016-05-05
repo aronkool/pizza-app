@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LW0-c3-x2W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LW0-c3-x2W">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Pizza's-->
@@ -25,7 +26,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -66,7 +67,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -79,7 +80,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Toppings" id="8bF-4D-Huz">
-                        <barButtonItem key="rightBarButtonItem" title="Bestellen" id="FCZ-Cg-VwL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Bestellen" id="FCZ-Cg-VwL">
+                            <connections>
+                                <action selector="bestellen:" destination="XcB-JD-WlH" id="ivO-dy-7dI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="MFu-bz-4t2" kind="show" identifier="showOrder" id="6Yy-Uq-AbO"/>
@@ -89,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="1997" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Bestellen View Controller-->
         <scene sceneID="9mN-eV-hdH">
             <objects>
-                <viewController id="MFu-bz-4t2" sceneMemberID="viewController">
+                <viewController id="MFu-bz-4t2" customClass="BestellenViewController" customModule="swiftpizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="teP-27-jd0"/>
                         <viewControllerLayoutGuide type="bottom" id="5tM-vp-lgz"/>
@@ -100,8 +105,66 @@
                     <view key="view" contentMode="scaleToFill" id="cqb-rX-goc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Het volgende wordt besteld:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFN-gR-c3I">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2Zc-ZE-q1f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-Bb-DrH">
+                                <rect key="frame" x="20" y="101" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4bP-If-oWS"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Succes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-bi-H0L">
+                                <rect key="frame" x="20" y="237" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTA-yU-ypF">
+                                <rect key="frame" x="20" y="266" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O4U-vf-ca4"/>
+                                </constraints>
+                                <state key="normal" title="Volgende bestelling">
+                                    <color key="titleColor" red="0.79697516030000004" green="0.037276789689999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToStart:" destination="MFu-bz-4t2" eventType="touchUpInside" id="8DD-fX-6od"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DNB-bi-H0L" firstAttribute="top" secondItem="sZv-Bb-DrH" secondAttribute="bottom" constant="8" id="5qm-Iq-CKP"/>
+                            <constraint firstItem="DNB-bi-H0L" firstAttribute="trailing" secondItem="cqb-rX-goc" secondAttribute="trailingMargin" id="Ad7-bI-egc"/>
+                            <constraint firstItem="sZv-Bb-DrH" firstAttribute="trailing" secondItem="cqb-rX-goc" secondAttribute="trailingMargin" id="GNO-GB-T18"/>
+                            <constraint firstItem="rFN-gR-c3I" firstAttribute="trailing" secondItem="cqb-rX-goc" secondAttribute="trailingMargin" id="MJA-zG-dyy"/>
+                            <constraint firstItem="sZv-Bb-DrH" firstAttribute="leading" secondItem="cqb-rX-goc" secondAttribute="leadingMargin" id="To4-cS-6zL"/>
+                            <constraint firstItem="rFN-gR-c3I" firstAttribute="leading" secondItem="cqb-rX-goc" secondAttribute="leadingMargin" id="WJa-vP-vYO"/>
+                            <constraint firstItem="rFN-gR-c3I" firstAttribute="top" secondItem="teP-27-jd0" secondAttribute="bottom" constant="8" id="hzc-BG-d9z"/>
+                            <constraint firstItem="DNB-bi-H0L" firstAttribute="leading" secondItem="cqb-rX-goc" secondAttribute="leadingMargin" id="jA2-73-JDB"/>
+                            <constraint firstItem="sZv-Bb-DrH" firstAttribute="top" secondItem="rFN-gR-c3I" secondAttribute="bottom" constant="8" id="sdh-Db-wiz"/>
+                            <constraint firstItem="VTA-yU-ypF" firstAttribute="top" secondItem="DNB-bi-H0L" secondAttribute="bottom" constant="8" id="ug3-me-bY7"/>
+                            <constraint firstItem="VTA-yU-ypF" firstAttribute="leading" secondItem="cqb-rX-goc" secondAttribute="leadingMargin" id="xFO-Vo-NND"/>
+                            <constraint firstItem="VTA-yU-ypF" firstAttribute="trailing" secondItem="cqb-rX-goc" secondAttribute="trailingMargin" id="xVa-4Q-PCL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bestellingTextField" destination="sZv-Bb-DrH" id="Fk0-Cg-vto"/>
+                        <outlet property="nextButton" destination="VTA-yU-ypF" id="jji-R1-U9x"/>
+                        <outlet property="succesLabel" destination="DNB-bi-H0L" id="tdL-0h-UEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOV-hb-aFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

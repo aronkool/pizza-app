@@ -10,7 +10,11 @@ import UIKit
 
 class ToppingsTableViewController : TableViewController{
     
-    var pizza : Pizza?
+    var pizza : Pizza?{
+        didSet{
+            self.title = pizza?.naam
+        }
+    }
     
     var toppings = [Topping]()
     
@@ -42,6 +46,16 @@ class ToppingsTableViewController : TableViewController{
         let topping = toppings[indexPath.row]
         pizza?.toggle(topping)
         tableView.reloadData()
+    }
+    
+    override func prepareForNextViewController(nextViewController: UIViewController) {
+        if let viewController = nextViewController as? BestellenViewController{
+            viewController.pizza = pizza
+        }
+    }
+    
+    @IBAction func bestellen(sender: UIBarButtonItem) {
+        gaNaarBestellen()
     }
 }
 
