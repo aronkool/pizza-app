@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB14A8601CDB510B00865D95 /* BestellenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */; };
 		FB3674111CD14E6D00A3898A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674101CD14E6D00A3898A /* AppDelegate.swift */; };
-		FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674121CD14E6D00A3898A /* ViewController.swift */; };
 		FB3674161CD14E6D00A3898A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3674141CD14E6D00A3898A /* Main.storyboard */; };
 		FB3674191CD14E6D00A3898A /* swiftpizza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB3674171CD14E6D00A3898A /* swiftpizza.xcdatamodeld */; };
 		FB36741B1CD14E6D00A3898A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB36741A1CD14E6D00A3898A /* Assets.xcassets */; };
 		FB36741E1CD14E6D00A3898A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB36741C1CD14E6D00A3898A /* LaunchScreen.storyboard */; };
 		FB3674291CD14E6D00A3898A /* swiftpizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674281CD14E6D00A3898A /* swiftpizzaTests.swift */; };
 		FB3674341CD14E6D00A3898A /* swiftpizzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */; };
+		FB3C5C221CD913AC00F49EE0 /* PizzaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3C5C211CD913AC00F49EE0 /* PizzaTableViewController.swift */; };
+		FB3C5C241CD914D400F49EE0 /* TableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3C5C231CD914D400F49EE0 /* TableCells.swift */; };
+		FB3C5C261CD916B600F49EE0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3C5C251CD916B600F49EE0 /* TableViewController.swift */; };
+		FB3C5C281CD91A1A00F49EE0 /* ToppingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3C5C271CD91A1A00F49EE0 /* ToppingsTableViewController.swift */; };
+		FBDEC6F21CD56775001E81C5 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F11CD56775001E81C5 /* Pizza.swift */; };
+		FBDEC6F41CD56806001E81C5 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F31CD56806001E81C5 /* Topping.swift */; };
+		FBDEC6F71CD56A48001E81C5 /* PizzaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F61CD56A48001E81C5 /* PizzaService.swift */; };
+		FBDEC6F91CD56A5D001E81C5 /* MockPizzaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEC6F81CD56A5D001E81C5 /* MockPizzaService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestellenViewController.swift; sourceTree = "<group>"; };
 		FB36740D1CD14E6D00A3898A /* swiftpizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftpizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3674101CD14E6D00A3898A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB3674121CD14E6D00A3898A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB3674151CD14E6D00A3898A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB3674181CD14E6D00A3898A /* swiftpizza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftpizza.xcdatamodel; sourceTree = "<group>"; };
 		FB36741A1CD14E6D00A3898A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		FB36742F1CD14E6D00A3898A /* swiftpizzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftpizzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftpizzaUITests.swift; sourceTree = "<group>"; };
 		FB3674351CD14E6D00A3898A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB3C5C211CD913AC00F49EE0 /* PizzaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaTableViewController.swift; sourceTree = "<group>"; };
+		FB3C5C231CD914D400F49EE0 /* TableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCells.swift; sourceTree = "<group>"; };
+		FB3C5C251CD916B600F49EE0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FB3C5C271CD91A1A00F49EE0 /* ToppingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingsTableViewController.swift; sourceTree = "<group>"; };
+		FBDEC6F11CD56775001E81C5 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		FBDEC6F31CD56806001E81C5 /* Topping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		FBDEC6F61CD56A48001E81C5 /* PizzaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaService.swift; sourceTree = "<group>"; };
+		FBDEC6F81CD56A5D001E81C5 /* MockPizzaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPizzaService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +115,10 @@
 		FB36740F1CD14E6D00A3898A /* swiftpizza */ = {
 			isa = PBXGroup;
 			children = (
+				FB3C5C201CD9137100F49EE0 /* UI */,
+				FBDEC6F51CD56A2A001E81C5 /* communication */,
+				FBDEC6F01CD56761001E81C5 /* model */,
 				FB3674101CD14E6D00A3898A /* AppDelegate.swift */,
-				FB3674121CD14E6D00A3898A /* ViewController.swift */,
 				FB3674141CD14E6D00A3898A /* Main.storyboard */,
 				FB36741A1CD14E6D00A3898A /* Assets.xcassets */,
 				FB36741C1CD14E6D00A3898A /* LaunchScreen.storyboard */,
@@ -126,6 +144,44 @@
 				FB3674351CD14E6D00A3898A /* Info.plist */,
 			);
 			path = swiftpizzaUITests;
+			sourceTree = "<group>";
+		};
+		FB3C5C201CD9137100F49EE0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FBD0DE5E1CDD08E400D534F4 /* Helpers */,
+				FB3C5C211CD913AC00F49EE0 /* PizzaTableViewController.swift */,
+				FB3C5C271CD91A1A00F49EE0 /* ToppingsTableViewController.swift */,
+				FB14A85F1CDB510B00865D95 /* BestellenViewController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FBD0DE5E1CDD08E400D534F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB3C5C231CD914D400F49EE0 /* TableCells.swift */,
+				FB3C5C251CD916B600F49EE0 /* TableViewController.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FBDEC6F01CD56761001E81C5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FBDEC6F11CD56775001E81C5 /* Pizza.swift */,
+				FBDEC6F31CD56806001E81C5 /* Topping.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		FBDEC6F51CD56A2A001E81C5 /* communication */ = {
+			isa = PBXGroup;
+			children = (
+				FBDEC6F61CD56A48001E81C5 /* PizzaService.swift */,
+				FBDEC6F81CD56A5D001E81C5 /* MockPizzaService.swift */,
+			);
+			name = communication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3C5C281CD91A1A00F49EE0 /* ToppingsTableViewController.swift in Sources */,
+				FB3C5C241CD914D400F49EE0 /* TableCells.swift in Sources */,
+				FBDEC6F21CD56775001E81C5 /* Pizza.swift in Sources */,
 				FB3674191CD14E6D00A3898A /* swiftpizza.xcdatamodeld in Sources */,
-				FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */,
+				FB3C5C261CD916B600F49EE0 /* TableViewController.swift in Sources */,
+				FB14A8601CDB510B00865D95 /* BestellenViewController.swift in Sources */,
+				FBDEC6F41CD56806001E81C5 /* Topping.swift in Sources */,
+				FBDEC6F91CD56A5D001E81C5 /* MockPizzaService.swift in Sources */,
+				FBDEC6F71CD56A48001E81C5 /* PizzaService.swift in Sources */,
+				FB3C5C221CD913AC00F49EE0 /* PizzaTableViewController.swift in Sources */,
 				FB3674111CD14E6D00A3898A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +552,7 @@
 				FB36743A1CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB36743B1CD14E6D00A3898A /* Build configuration list for PBXNativeTarget "swiftpizzaTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +561,7 @@
 				FB36743D1CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB36743E1CD14E6D00A3898A /* Build configuration list for PBXNativeTarget "swiftpizzaUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +570,7 @@
 				FB3674401CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
