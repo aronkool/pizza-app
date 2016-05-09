@@ -15,6 +15,8 @@
 		FB36741E1CD14E6D00A3898A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB36741C1CD14E6D00A3898A /* LaunchScreen.storyboard */; };
 		FB3674291CD14E6D00A3898A /* swiftpizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674281CD14E6D00A3898A /* swiftpizzaTests.swift */; };
 		FB3674341CD14E6D00A3898A /* swiftpizzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */; };
+		FBD0DE611CDD1EB700D534F4 /* Codevoorbeelden.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD0DE601CDD1EB700D534F4 /* Codevoorbeelden.swift */; };
+		FBD0DE631CDD1EF100D534F4 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD0DE621CDD1EF100D534F4 /* Pizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FB36742F1CD14E6D00A3898A /* swiftpizzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftpizzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3674331CD14E6D00A3898A /* swiftpizzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftpizzaUITests.swift; sourceTree = "<group>"; };
 		FB3674351CD14E6D00A3898A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBD0DE601CDD1EB700D534F4 /* Codevoorbeelden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codevoorbeelden.swift; sourceTree = "<group>"; };
+		FBD0DE621CDD1EF100D534F4 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				FB36741C1CD14E6D00A3898A /* LaunchScreen.storyboard */,
 				FB36741F1CD14E6D00A3898A /* Info.plist */,
 				FB3674171CD14E6D00A3898A /* swiftpizza.xcdatamodeld */,
+				FBD0DE601CDD1EB700D534F4 /* Codevoorbeelden.swift */,
+				FBD0DE621CDD1EF100D534F4 /* Pizza.swift */,
 			);
 			path = swiftpizza;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD0DE611CDD1EB700D534F4 /* Codevoorbeelden.swift in Sources */,
 				FB3674191CD14E6D00A3898A /* swiftpizza.xcdatamodeld in Sources */,
 				FB3674131CD14E6D00A3898A /* ViewController.swift in Sources */,
+				FBD0DE631CDD1EF100D534F4 /* Pizza.swift in Sources */,
 				FB3674111CD14E6D00A3898A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +496,7 @@
 				FB36743A1CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB36743B1CD14E6D00A3898A /* Build configuration list for PBXNativeTarget "swiftpizzaTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				FB36743D1CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB36743E1CD14E6D00A3898A /* Build configuration list for PBXNativeTarget "swiftpizzaUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				FB3674401CD14E6D00A3898A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
