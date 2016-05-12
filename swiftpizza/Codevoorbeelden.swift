@@ -14,6 +14,12 @@ func optionals(){
     if let pizzaKeuze = pizzaKeuze where !pizzaKeuze.toppings.isEmpty{
         
     }
+    
+    let visPizzas = [Pizza]()
+    
+    if let firstTopping = visPizzas.first?.toppings.first {
+        
+    }
 }
 
 //    let pizza = Pizza()
@@ -61,21 +67,30 @@ class ParentClass{
     }
 }
 
-class MyClass : ParentClass{
-    var variabele1 : String
-    let variabele2 : String?
+class Entiteit{
     
-    init(waarde1 : String, waarde2 : String){
-        variabele1 = waarde1
-        variabele2 = waarde2
+}
+
+class Pizza : Entiteit, Bestelbaar{
+    var prijs : Double
+    let naam : String?
+    
+    init(naam : String, prijs : Double){
+        self.naam = naam
+        self.prijs = prijs
+    }
+
+    init(naam : String){
+        self.naam = naam
+        self.prijs = 0
     }
     
-    func someVoidFunction(){
+    func bestel(){
         
     }
     
-    func someReturnFunction() -> String{
-        return ""
+    func naamHoofdletters() -> String?{
+        return naam?.capitalizedString
     }
 }
 
@@ -180,14 +195,14 @@ func listExamples(){
     
 }
 
-//func mapExamples(){
-//    var pizzas = [String : Pizza]()
-//    pizzas["Margherita"] = Pizza(naam: "Margherita")
-//    for entry in pizzas{
-//        print(entry.0) // key
-//        print(entry.1) // value
-//    }
-//}
+func mapExamples(){
+    var pizzas = [String : Pizza]()
+    pizzas["Margherita"] = Pizza(naam: "Margherita")
+    for (key, value) in pizzas{
+        print(key) // key
+        print(value) // value
+    }
+}
 //
 //func getBestelling() -> (eten: [Pizza], drinken: [Drank]){
 //    let pizzas = [Pizza(naam: "Margherita"), Pizza(naam: "Tonno") ]
@@ -214,16 +229,20 @@ func addVegetarischePizzas(let pizzas : [Pizza]){
 }
 
 
-//func tryExample(){
-//    let pizza = Pizza(naam: "Tonno")
-//    do {
-//        try bestel(pizza)
-//    } catch _{
-//        
-//    }
-//    
+func tryExample(){
+    let pizza = Pizza(naam: "Tonno")
+    do {
+        try bestel(pizza)
+    } catch {
+        
+    }
+    
+    let pizzas = [Pizza]()
+    
+    let tweeTotEnMetVijf = pizzas[1..<5]
+    
 //    let pizzas = try? fetchFromServer()
-//}
+}
 
 func bestel(pizza : Pizza) throws{
     throw NotImplemented() // Implementatie van ErrorType
@@ -274,16 +293,16 @@ extension String{
     }
 }
 
-class Fetcher<T:Topping>{
-    
-    func get() -> [T]{
-        return []
-    }
-    
-    func create() -> T{
-        return T()
-    }
-}
+//class Fetcher<T:Topping>{
+//    
+//    func get() -> [T]{
+//        return []
+//    }
+//    
+//    func create() -> T{
+//        return T()
+//    }
+//}
 
 func whereExample(){
     let pizza = Pizza()
@@ -314,6 +333,35 @@ func combineer<T1:Pizza, T2:Pizza where T1 : Bestelbaar>(pizza1 : T1, pizza2 : T
     
 }
 
+class PizzaService{
+    var url : String?
+    var method : String?
+}
+
+//private var internalPizzaSerice : PizzaService?
+//
+//var pizzaService : PizzaService{
+//    if let pizzaService = internalPizzaSerice{
+//        return pizzaService
+//    } else{
+//        let service = PizzaService()
+//        service.url = "https://localhost/api/"
+//        service.method = "GET"
+//        internalPizzaSerice = service
+//        return service
+//    }
+//}
+
+class LazyExample{
+ 
+    lazy var pizzaService : PizzaService = {
+        let service = PizzaService()
+        service.url = "https://localhost/api/"
+        service.method = "GET"
+        return service
+    }()
+    
+}
 
 //mutating func toggle(topping : Topping){
 //    if heeftTopping(topping){

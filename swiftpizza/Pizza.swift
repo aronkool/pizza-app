@@ -18,16 +18,16 @@ import Foundation
 //    }
 //}
 
-class Pizza{
-    var naam : String = ""
-    let soort : PizzaSoort = PizzaSoort.Onbekend
-//    var prijs : Double
-    let toppings : [Topping] = []
-    
-    func resetNaam(){
-        naam = "Standaard Pizza"
-    }
-}
+//class Pizza{
+//    var naam : String = ""
+//    let soort : PizzaSoort = PizzaSoort.Onbekend
+////    var prijs : Double
+//    let toppings : [Topping] = []
+//    
+//    func resetNaam(){
+//        naam = "Standaard Pizza"
+//    }
+//}
 
 class Topping{
     let id = 0
