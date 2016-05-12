@@ -28,7 +28,13 @@ class MockPizzaServiceInstance : PizzaServiceInstance{
                       Pizza(id: 2, naam: "Pescatore", toppings: Toppings.Basis + [Toppings.Zalm, Toppings.Tonijn, Toppings.Mossel, Toppings.Kappertjes]),
                       Pizza(id: 3, naam: "Tonno", toppings: Toppings.Basis + [Toppings.Tonijn]),
                       Pizza(id: 4, naam: "Kinderpizza", toppings: Toppings.Basis + [Toppings.Ham])]
-        onSucces(pizzas)
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+            sleep(1)
+            dispatch_async(dispatch_get_main_queue(), {
+                onSucces(pizzas)
+            })
+        }
     }
     
     override func getToppings(onSucces: ([Topping]) -> Void) {
@@ -40,12 +46,23 @@ class MockPizzaServiceInstance : PizzaServiceInstance{
                         Toppings.Tonijn,
                         Toppings.Mossel,
                         Toppings.Kappertjes
-                        ]
-        onSucces(toppings)
+        ]
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+            sleep(1)
+            dispatch_async(dispatch_get_main_queue(), {
+                onSucces(toppings)
+            })
+        }
     }
     
     override func bestelPizza(pizza: Pizza, onCompletion: () -> Void) {
         print("Pizza besteld")
-        onCompletion()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+            sleep(1)
+            dispatch_async(dispatch_get_main_queue(), {
+                onCompletion()
+            })
+        }
     }
 }
