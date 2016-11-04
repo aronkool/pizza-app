@@ -25,16 +25,30 @@ class BestellenViewController : UIViewController{
     }
     
     fileprivate func bestelPizza(){
-        //TODO: geef de bestelling door via de PizzaService
+        if let pizza = pizza{
+            PizzaService.bestelPizza(pizza, onCompletion: {
+                self.succesLabel.isHidden = false
+                self.nextButton.isHidden = false
+            })
+        }
     }
     
     fileprivate func updateViews(){
-        //TODO: toon de gekozen pizza met de gekozen toppings in het bestellingTextField
+        if let pizza = pizza{
+            self.bestellingTextField.text = "\(pizza.naam) met \(pizza.toppings.asList)"
+        } else{
+            self.bestellingTextField.text = "Geen"
+        }
     }
     
     @IBAction func backToStart(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let _ = self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
-//TODO: extensions zouden mooi zijn om de bovenstaande methodes invulling te geven
+private extension Array where Element:Topping{
+    
+    var asList : String{
+        return map({ return $0.naam }).joined(separator: ", ")
+    }
+}

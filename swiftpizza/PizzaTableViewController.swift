@@ -10,28 +10,36 @@ import UIKit
 
 class PizzaTableViewController : TableViewController{
     
+    var pizzas = [Pizza]()
+    var laatstePizza : Pizza?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: pizza's opvragen (TIP: herlaadt na het inladen de tabel)
+        PizzaService.getPizzas { (pizzas) in
+            self.pizzas = pizzas
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO: het aantal regels dat getoond moet worden
-        return 0
+        return pizzas.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getPizzaCell(indexPath)
-        //TODO: de juiste vulling aan de cell geven (label = textLabel)
+        cell.textLabel?.text = pizzas[indexPath.row].naam
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: doorgaan naar het volgende scherm
+        laatstePizza = pizzas[indexPath.row]
+        gaNaarToppings()
     }
     
     override func prepareForNextViewController(_ nextViewController: UIViewController) {
-        //TODO: de gemaakte keuze doorgeven aan het volgende scherm
+        if let toppingsViewController = nextViewController as? ToppingsTableViewController{
+            toppingsViewController.pizza = laatstePizza
+        }
     }
     
     fileprivate func getPizzaCell(_ indexPath : IndexPath) -> UITableViewCell{
