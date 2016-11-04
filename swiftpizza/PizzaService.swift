@@ -12,15 +12,15 @@ let PizzaService = MockPizzaServiceInstance()
 
 class PizzaServiceInstance{
     
-    func getPizzas(onSucces : ([Pizza]) -> Void){
+    func getPizzas(_ onSucces : ([Pizza]) -> Void){
         
     }
     
-    func bestelPizza(pizza : Pizza, onCompletion : () -> Void){
+    func bestelPizza(_ pizza : Pizza, onCompletion : () -> Void){
         
     }
     
-    func getToppings(onSucces : ([Topping]) -> Void){
+    func getToppings(_ onSucces : ([Topping]) -> Void){
         
     }
 }

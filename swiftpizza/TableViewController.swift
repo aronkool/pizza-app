@@ -10,20 +10,20 @@ import UIKit
 
 class TableViewController : UITableViewController{
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
-        prepareForNextViewController(segue.destinationViewController)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        prepareForNextViewController(segue.destination)
     }
     
-    func prepareForNextViewController(nextViewController : UIViewController){
+    func prepareForNextViewController(_ nextViewController : UIViewController){
         
     }
     
     func gaNaarToppings(){
-        self.performSegueWithIdentifier("showToppings", sender: self)
+        self.performSegue(withIdentifier: "showToppings", sender: self)
     }
     
     func gaNaarBestellen(){
-        self.performSegueWithIdentifier("showOrder", sender: self)
+        self.performSegue(withIdentifier: "showOrder", sender: self)
     }
 }

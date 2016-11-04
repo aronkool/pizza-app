@@ -24,16 +24,16 @@ class BestellenViewController : UIViewController{
         bestelPizza()
     }
     
-    private func bestelPizza(){
+    fileprivate func bestelPizza(){
         //TODO: geef de bestelling door via de PizzaService
     }
     
-    private func updateViews(){
+    fileprivate func updateViews(){
         //TODO: toon de gekozen pizza met de gekozen toppings in het bestellingTextField
     }
     
-    @IBAction func backToStart(sender: UIButton) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+    @IBAction func backToStart(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 

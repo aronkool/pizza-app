@@ -10,7 +10,7 @@ import Foundation
 
 class MockPizzaServiceInstance : PizzaServiceInstance{
     
-    private struct Toppings{
+    fileprivate struct Toppings{
         static let Tomaat = Topping(id: 0, naam: "Tomaat")
         static let Kaas = Topping(id: 1, naam: "Kaas")
         static let Salami = Topping(id: 2, naam: "Salami")
@@ -22,22 +22,12 @@ class MockPizzaServiceInstance : PizzaServiceInstance{
         static let Basis = [Toppings.Tomaat, Toppings.Kaas]
     }
     
-    override func getPizzas(onSucces: ([Pizza]) -> Void) {
-        let pizzas = [Pizza(id: 0, naam: "Margerita", toppings: Toppings.Basis),
-                      Pizza(id: 1, naam: "Salami", toppings: Toppings.Basis + [Toppings.Salami]),
-                      Pizza(id: 2, naam: "Pescatore", toppings: Toppings.Basis + [Toppings.Zalm, Toppings.Tonijn, Toppings.Mossel, Toppings.Kappertjes]),
-                      Pizza(id: 3, naam: "Tonno", toppings: Toppings.Basis + [Toppings.Tonijn]),
-                      Pizza(id: 4, naam: "Kinderpizza", toppings: Toppings.Basis + [Toppings.Ham])]
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
-            sleep(1)
-            dispatch_async(dispatch_get_main_queue(), {
-                onSucces(pizzas)
-            })
-        }
+    override func bestelPizza(_ pizza : Pizza, onCompletion : () -> Void){
+        print("Pizza besteld")
+        onCompletion()
     }
     
-    override func getToppings(onSucces: ([Topping]) -> Void) {
+    override func getToppings(_ onSucces : ([Topping]) -> Void){
         let toppings = [Toppings.Tomaat,
                         Toppings.Kaas,
                         Toppings.Salami,
@@ -47,22 +37,15 @@ class MockPizzaServiceInstance : PizzaServiceInstance{
                         Toppings.Mossel,
                         Toppings.Kappertjes
         ]
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
-            sleep(1)
-            dispatch_async(dispatch_get_main_queue(), {
-                onSucces(toppings)
-            })
-        }
+        onSucces(toppings)
     }
     
-    override func bestelPizza(pizza: Pizza, onCompletion: () -> Void) {
-        print("Pizza besteld")
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
-            sleep(1)
-            dispatch_async(dispatch_get_main_queue(), {
-                onCompletion()
-            })
-        }
+    override func getPizzas(_ onSucces: ([Pizza]) -> Void) {
+        let pizzas = [Pizza(id: 0, naam: "Margerita", toppings: Toppings.Basis),
+                      Pizza(id: 1, naam: "Salami", toppings: Toppings.Basis + [Toppings.Salami]),
+                      Pizza(id: 2, naam: "Pescatore", toppings: Toppings.Basis + [Toppings.Zalm, Toppings.Tonijn, Toppings.Mossel, Toppings.Kappertjes]),
+                      Pizza(id: 3, naam: "Tonno", toppings: Toppings.Basis + [Toppings.Tonijn]),
+                      Pizza(id: 4, naam: "Kinderpizza", toppings: Toppings.Basis + [Toppings.Ham])]
+          onSucces(pizzas)
     }
 }

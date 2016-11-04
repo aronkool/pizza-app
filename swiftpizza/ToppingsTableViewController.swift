@@ -17,31 +17,31 @@ class ToppingsTableViewController : TableViewController{
         //TODO: toppings opvragen
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO: geef het aantal te tonen regels terug
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getToppingCell(indexPath)
         //TODO: naam van de topping tonen
         //TODO: vinkje (= accessoryType) tonen
         return cell
     }
     
-    private func getToppingCell(indexPath : NSIndexPath) -> UITableViewCell{
-        return tableView.dequeueReusableCellWithIdentifier(TableCells.Topping, forIndexPath: indexPath)
+    fileprivate func getToppingCell(_ indexPath : IndexPath) -> UITableViewCell{
+        return tableView.dequeueReusableCell(withIdentifier: TableCells.Topping, for: indexPath)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: de state in de toppings 
     }
     
-    override func prepareForNextViewController(nextViewController: UIViewController) {
+    override func prepareForNextViewController(_ nextViewController: UIViewController) {
         //TODO: de gemaakte keuze doorgeven aan het volgende scherm
     }
     
-    @IBAction func bestellen(sender: UIBarButtonItem) {
+    @IBAction func bestellen(_ sender: UIBarButtonItem) {
         gaNaarBestellen()
     }
 }

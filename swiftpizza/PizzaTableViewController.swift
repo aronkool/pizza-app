@@ -15,26 +15,26 @@ class PizzaTableViewController : TableViewController{
         //TODO: pizza's opvragen (TIP: herlaadt na het inladen de tabel)
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO: het aantal regels dat getoond moet worden
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getPizzaCell(indexPath)
         //TODO: de juiste vulling aan de cell geven (label = textLabel)
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: doorgaan naar het volgende scherm
     }
     
-    override func prepareForNextViewController(nextViewController: UIViewController) {
+    override func prepareForNextViewController(_ nextViewController: UIViewController) {
         //TODO: de gemaakte keuze doorgeven aan het volgende scherm
     }
     
-    private func getPizzaCell(indexPath : NSIndexPath) -> UITableViewCell{
-        return tableView.dequeueReusableCellWithIdentifier(TableCells.Pizza, forIndexPath: indexPath)
+    fileprivate func getPizzaCell(_ indexPath : IndexPath) -> UITableViewCell{
+        return tableView.dequeueReusableCell(withIdentifier: TableCells.Pizza, for: indexPath)
     }
 }
